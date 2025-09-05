@@ -16,7 +16,7 @@
 
 
 
-local CameraShakeInstance = require(script.Parent.CameraShakeInstance)
+local CameraShakeInstance =loadstring(readfile('TSB/CameraShakeInstance.lua'))()
 
 local CameraShakePresets = {
 	
