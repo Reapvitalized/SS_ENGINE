@@ -68,7 +68,7 @@ local defaultRotInfluence = V3(1, 1, 1)
 
 
 CameraShaker.CameraShakeInstance = CameraShakeInstance
-CameraShaker.Presets = require(script.CameraShakePresets)
+CameraShaker.Presets = loadstring(readfile('TSB/CameraShakePresets.lua'))()
 
 
 function CameraShaker.new(renderPriority, callback)
