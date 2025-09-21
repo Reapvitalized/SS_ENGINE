@@ -58,6 +58,7 @@ local LightningBolt = class() do
 			{
 				origin = origin;
 				goal = goal;
+				timekill = timekill or 1
 				transparency = self.options.transparency or 0.4;
 				depth = self.depth;
 			}
