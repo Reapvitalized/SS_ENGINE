@@ -34,6 +34,7 @@ local LightningBolt = class() do
 		
 		self.origin = origin
 		self.goal = goal
+		self.timekill = timekill
 		self.depth = self.options.depth or 0
 		self.thickness = self.options.thickness or 1
 		self.rep = self.options.bends or 3
@@ -150,7 +151,7 @@ local LightningBolt = class() do
 				part.CFrame = CFrame.new((line.goal + line.origin) / 2, line.goal)
 				part.Transparency = line.transparency
 				part.Parent = model
-				local Tween = MainModule.CreateTween(part, {1, Enum.EasingStyle.Sine, Enum.EasingDirection.In, 0, false, 0},{ 
+				local Tween = MainModule.CreateTween(part, {timekill, Enum.EasingStyle.Sine, Enum.EasingDirection.In, 0, false, 0},{ 
 					Size = Vector3.new(0,0,part.Size.Z),
 					Transparency = 1
 				}, true)
